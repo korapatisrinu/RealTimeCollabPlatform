@@ -1,4 +1,3 @@
-import CanvasDraw from "react-canvas-draw"
 import { useRef, useEffect, useState } from "react"
 import { io } from "socket.io-client"
 
@@ -86,7 +85,9 @@ export default function Whiteboard({ room, username }) {
 
         console.log("CLEAR CLICKED")
 
-        canvasRef.current.clear()
+        if (canvasRef.current) {
+            canvasRef.current.clear()
+        }
 
         socket.emit(
             "send_drawing",
@@ -118,27 +119,6 @@ export default function Whiteboard({ room, username }) {
             </div>
 
             <div className="w-full overflow-hidden rounded-2xl">
-
-                <CanvasDraw
-                    ref={canvasRef}
-                    onChange={handleChange}
-                    brushRadius={3}
-                    lazyRadius={0}
-                    hideGrid={false}
-                   canvasWidth={
-    window.innerWidth > 768
-        ? window.innerWidth - 500
-        : window.innerWidth - 60
-}
-                   canvasHeight={
-    window.innerWidth > 768
-        ? 450
-        : 300
-}
-                    backgroundColor="#0f172a"
-                    brushColor="#ffffff"
-                    className="rounded-2xl w-full"
-                />
 
             </div>
 
