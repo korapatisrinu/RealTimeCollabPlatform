@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+}
+
+.ProseMirror {
+  min-height: 250px;
+  padding: 20px;
+  color: white;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.ProseMirror h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 16px 0;
+  color: #ffffff;
+}
+
+.ProseMirror h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 14px 0;
+  color: #ffffff;
+}
+
+.ProseMirror p {
+  margin: 10px 0;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+
+.ProseMirror li {
+  margin: 4px 0;
+}
+
+.ProseMirror blockquote {
+  border-left: 4px solid #8b5cf6;
+  padding-left: 12px;
+  margin: 12px 0;
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+.ProseMirror code {
+  background: #1e293b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #f8fafc;
+}
+
+.ProseMirror pre {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #334155;
+}
+
+.ProseMirror strong {
+  font-weight: bold;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
